@@ -20,3 +20,9 @@
 2. write `cd backend` in the terminal
 3. run `npm install` & run `node app.js` to run the backend
 4. add a new `availablePlaces` state with an empty array as initial state in `AvailablePlaces.jsx`
+
+## 2. How NOT To Send HTTP Requests (And Why It's Wrong)
+
+1. use the `fetch` function to fetch the data from the backend API
+2. you are not allowed to use the `await` & `async` keywords in a React component
+3. call `setAvailablePlaces` inside of the `fetch` function to get back the data
