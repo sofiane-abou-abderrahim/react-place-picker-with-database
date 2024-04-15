@@ -37,3 +37,11 @@
 
 1. use `async` / `await` inside `useEffect()` by creating a `fetchPlaces()` function in `AvailablePlaces.jsx`
 2. remove the old code
+
+## 5. Handling Loading States
+
+1. show some loading text whilst we are waiting for the data to arrive in case of bad network in `AvailablePlaces.jsx`
+2. inside of `Places.jsx`, accept the `isLoading` & `loadingText` props
+3. use these props to show some special output
+4. control the `isLoading` prop dynamically depending on the progress of the HTTP request
+5. add a new `isFetching` state to manage the loading state when fetching the data in `AvailablePlaces.jsx`
