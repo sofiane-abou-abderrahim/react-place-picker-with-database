@@ -26,3 +26,9 @@
 1. use the `fetch` function to fetch the data from the backend API
 2. you are not allowed to use the `await` & `async` keywords in a React component
 3. call `setAvailablePlaces` inside of the `fetch` function to get back the data
+
+## 3. Sending HTTP Requests (GET Request) via useEffect
+
+1. use `useEffect` to fix this problem of infinite loop
+2. make the image files available with help of `app.use(express.static('images'));` in the backend
+3. send a request to for those image files to the backend in the frontend in `Places.jsx`
