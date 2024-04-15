@@ -32,3 +32,8 @@
 1. use `useEffect` to fix this problem of infinite loop
 2. make the image files available with help of `app.use(express.static('images'));` in the backend
 3. send a request to for those image files to the backend in the frontend in `Places.jsx`
+
+## 4. Using async / await
+
+1. use `async` / `await` inside `useEffect()` by creating a `fetchPlaces()` function in `AvailablePlaces.jsx`
+2. remove the old code
