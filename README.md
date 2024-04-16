@@ -53,3 +53,12 @@
    2. `throw` an `Error` & wrap the code with `try` / `catch` to prevent the application from crashing
    3. add an `error` state & use it to update the UI in case of error by rendering the `Error.jsx` component
 2. replace the `Error.jsx` component by `ErrorMessage.jsx` to avoid conflict with the `Error` class name
+
+## 7. Transforming Fetched Data
+
+1. fetch the user's location before setting the available places with help of the `navigator` object in `AvailablePlaces.jsx`
+2. sort the available places by calling `sortPlacesByDistance` from `loc.js`
+3. set the `sortedPlaces` as the available places `setAvailablePlaces` inside of the `navigator` function
+4. since you can't to use `await` on `navigator`, `setIsFetching` has to be moved elsewhere because it will be called too early
+   1. move `setIsFetching(false)` into the `navigator` callback function after setting the `setAvailablePlaces(sortedPlaces)`
+   2. call it again after setting the `error` if we have one
