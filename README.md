@@ -45,3 +45,11 @@
 3. use these props to show some special output
 4. control the `isLoading` prop dynamically depending on the progress of the HTTP request
 5. add a new `isFetching` state to manage the loading state when fetching the data in `AvailablePlaces.jsx`
+
+## 6. Handling HTTP Errors
+
+1. handle the error response in `AvailablePlaces.jsx`
+   1. with help of the `response.ok` property
+   2. `throw` an `Error` & wrap the code with `try` / `catch` to prevent the application from crashing
+   3. add an `error` state & use it to update the UI in case of error by rendering the `Error.jsx` component
+2. replace the `Error.jsx` component by `ErrorMessage.jsx` to avoid conflict with the `Error` class name
