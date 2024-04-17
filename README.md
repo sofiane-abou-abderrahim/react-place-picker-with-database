@@ -87,3 +87,11 @@
    2. show a modal to inform the user
    3. make the modal closable & clear the error message with help of a new `handleError` function
    4. display the modal only if there is an error to avoid bug by wrapping the `<ErrorMessage>` component with a condition
+
+## 11. Deleting Data (via DELETE HTTP Requests)
+
+1. in `App.jsx`, turn the `handleRemovePlace` function into an `async` function
+2. perform optimistic updating by first updating the `userPlaces` state
+3. then by sending a HTTP request with help of the `updateUserPlace` helper function
+4. add the `userPlaces` state as a dependency to the `useCallback` dependencies array
+5. wrap this HTTP request with a `try` / `catch` & handle the error
