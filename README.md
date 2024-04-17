@@ -62,3 +62,8 @@
 4. since you can't to use `await` on `navigator`, `setIsFetching` has to be moved elsewhere because it will be called too early
    1. move `setIsFetching(false)` into the `navigator` callback function after setting the `setAvailablePlaces(sortedPlaces)`
    2. call it again after setting the `error` if we have one
+
+## 8. Extracting Code & Improving Code Structure
+
+1. create a helper file named `http.js` & place the data fetching code from `AvailablePlaces.jsx` inside of it
+2. use this `fetchAvailablePlaces` function in `AvailablePlaces.jsx`
