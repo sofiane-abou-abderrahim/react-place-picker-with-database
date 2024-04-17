@@ -67,3 +67,13 @@
 
 1. create a helper file named `http.js` & place the data fetching code from `AvailablePlaces.jsx` inside of it
 2. use this `fetchAvailablePlaces` function in `AvailablePlaces.jsx`
+
+## 9. Sending Data with POST Requests
+
+1. send the updated selection of places to the backend in `App.jsx`
+   1. send the request in `handleSelectPlace` after updating the `userPlaces` state with help of the `fetch` function
+   2. define a new `updateUserPlaces` function in the `http.js` helper file & call it in `App.jsx`
+   3. pass the old `userPlaces` state & the newly `selectedPlaces` in front of it
+   4. `await` this function & decorate the `handleSelectPlace` function with `async`
+   5. use `try` / `catch` to wrap this `updateUserPlaces` function to catch potential errors
+2. select a place in the application & check the new data inserted in `data/user-places.json`
