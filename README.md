@@ -77,3 +77,13 @@
    4. `await` this function & decorate the `handleSelectPlace` function with `async`
    5. use `try` / `catch` to wrap this `updateUserPlaces` function to catch potential errors
 2. select a place in the application & check the new data inserted in `data/user-places.json`
+
+## 10. Using Optimistic Updating
+
+1. don't show a loading spinner or a loading text as you did in `AvailablePlaces.jsx`
+2. catch & handle error in `App.jsx`
+3. inform the user in case of error
+   1. manage a new `errorUpdatingPlaces` state to update if updating your places goes wrong
+   2. show a modal to inform the user
+   3. make the modal closable & clear the error message with help of a new `handleError` function
+   4. display the modal only if there is an error to avoid bug by wrapping the `<ErrorMessage>` component with a condition
