@@ -95,3 +95,12 @@
 3. then by sending a HTTP request with help of the `updateUserPlace` helper function
 4. add the `userPlaces` state as a dependency to the `useCallback` dependencies array
 5. wrap this HTTP request with a `try` / `catch` & handle the error
+
+## 12. Practice: Fetching Data
+
+1. fetch the places stored by the user in `App.jsx` with help of `useEffect` to avoid an inifinite loop when you update the state
+2. in `http.js`, define a new function named `fetchUserPlaces`
+3. in `App.js`, call the `fetchUserPlaces` function inside of `useEffect`
+4. catch & handle error
+5. manage some loading & error states
+6. show conditionally the error in case of error or the places in case there is no error
